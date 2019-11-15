@@ -1,0 +1,30 @@
+# tomcat
+server:
+  port: 8002
+spring:
+  application:
+    name: mdh-backup
+  boot:
+    admin:
+      client:
+        url: "http://localhost:8000"
+  cloud:
+    consul:
+      host: localhost
+      port: 8500
+      discovery:
+        serviceName: mdh-backup	# 注册到consul的服务名称
+# 开放健康检查接口
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+# backup datasource
+mdh:
+  backup:
+    datasource:
+      host: 47.102.204.61
+      userName: root
+      password: root
+      database: mdh

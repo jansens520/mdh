@@ -1,0 +1,7 @@
+com\read\core\page\PageResult.class
+com\read\core\exception\MdhException.class
+com\read\core\page\MybatisPageHelper.class
+com\read\core\page\PageRequest.class
+com\read\core\http\HttpResult.class
+com\read\core\service\CurdService.class
+com\read\core\http\HttpStatus.class

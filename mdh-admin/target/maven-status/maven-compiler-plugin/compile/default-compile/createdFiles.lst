@@ -1,0 +1,15 @@
+com\read\mdh\service\impl\SysLogServiceImpl.class
+com\read\mdh\service\impl\SysRoleServiceImpl.class
+com\read\mdh\service\impl\SysDeptServiceImpl.class
+com\read\mdh\service\SysLoginLogService.class
+com\read\mdh\service\impl\SysMenuServiceImpl.class
+com\read\mdh\service\SysDeptService.class
+com\read\mdh\service\SysConfigService.class
+com\read\mdh\service\SysLogService.class
+com\read\mdh\service\SysRoleService.class
+com\read\mdh\constant\SysConstants.class
+com\read\mdh\service\impl\SysConfigServiceImpl.class
+com\read\mdh\model\BaseModel.class
+com\read\mdh\service\impl\SysDictServiceImpl.class
+com\read\mdh\service\SysDictService.class
+com\read\mdh\service\SysMenuService.class
