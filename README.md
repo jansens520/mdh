@@ -1,12 +1,15 @@
 # mdh
+
 SpringBoot+SpringCloud+vue+Element开发项目
 
 项目介绍
+
 Mdh后台权限管理系统是基于Spring Boot、Spring Cloud、Vue.js 、Element UI等主流前后端技术，采用前后端分离架构实现的权限管理系统。
 也是一款采用当前主流技术实现的界面优雅、架构优良、代码简洁、注释完善、基础功能相对完整的JAVA EE快速开发平台，
 前后端开发人员都可以以此为范例从中学习和汲取技术知识，也可以基于此系统开发和实现具体生产项目。
 
 功能列表
+
 ✔ 系统登录：系统用户登录，系统登录认证（token方式）
 
 ✔ 用户管理：新建用户，修改用户，删除用户，查询用户
@@ -52,12 +55,15 @@ Mdh后台权限管理系统是基于Spring Boot、Spring Cloud、Vue.js 、Eleme
 软件架构
 
 前端架构
+
 开发工具
 WebStorm
+
 前端框架
 Vue 2.x
 
 后端架构
+
 开发环境
 IDE : IDEA 2019.2.3
 
@@ -72,6 +78,7 @@ Consul: Consul 1.6.2
 …
 
 技术选型
+
 核心框架：Spring Boot 2.x
 
 服务治理：Spring Cloud Finchley
@@ -93,6 +100,7 @@ Consul: Consul 1.6.2
 …
 
 项目结构
+
 mdh-common： 公共代码模块，主要放置一些工具类
 
 mdh-core： 封装业务模块，主要封装公共业务模块
