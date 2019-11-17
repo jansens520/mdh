@@ -4,7 +4,11 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mdh-backup" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mdh-common" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mdh-consumer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mdh-hystrix" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mdh-monitor" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/../mdh-pom" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mdh-producer" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../mdh-zuul" charset="UTF-8" />
   </component>
 </project>

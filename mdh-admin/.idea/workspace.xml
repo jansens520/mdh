@@ -26,6 +26,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Interface" />
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -40,16 +41,16 @@
   <component name="ProjectId" id="1ScqWx9EtRoWy6fMCJ0oQ49wVcX" />
   <component name="PropertiesComponent">
     <property name="jdk.selected.JAVA_MODULE" value="1.8.0_231" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mdh-monitor/src/main" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mdh-zuul/src/main/java/com/read/mdh/zuul" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ideaProject\mdh-monitor\src\main" />
-      <recent name="D:\ideaProject\mdh-monitor\src\main\resources" />
-      <recent name="D:\ideaProject\mdh-backup\src\main\resources" />
-      <recent name="D:\ideaProject\mdh-backup\src\main" />
-      <recent name="D:\ideaProject\mdh-backup\src\main\java\com\read\backup" />
+      <recent name="D:\ideaProject\mdh-zuul\src\main\java\com\read\mdh\zuul" />
+      <recent name="D:\ideaProject\mdh-zuul\src\main\resources" />
+      <recent name="D:\ideaProject\mdh-hystrix\src\main" />
+      <recent name="D:\ideaProject\mdh-hystrix\src\main\resources" />
+      <recent name="D:\ideaProject\mdh-consumer\src\main\java\com\read\mdh\consumer\controller" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -64,17 +65,17 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MdhMonitorApplication">
-    <configuration name="MdhApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.read.mdh.MdhApplication" />
-      <module name="mdh-admin" />
+  <component name="RunManager" selected="Application.MdhZuulApplication">
+    <configuration name="MdhConsumerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.consumer.MdhConsumerApplication" />
+      <module name="mdh-consumer" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MdhBackupApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.read.backup.MdhBackupApplication" />
-      <module name="mdh-backup" />
+    <configuration name="MdhHystrixApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.hystrix.MdhHystrixApplication" />
+      <module name="mdh-hystrix" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -86,19 +87,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MySqlBackupRestoreUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.read.backup.util.MySqlBackupRestoreUtils" />
-      <module name="mdh-backup" />
+    <configuration name="MdhProducerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.producer.MdhProducerApplication" />
+      <module name="mdh-producer" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MdhZuulApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.zuul.MdhZuulApplication" />
+      <module name="mdh-zuul" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MdhApplication" />
-        <item itemvalue="Application.MdhBackupApplication" />
+        <item itemvalue="Application.MdhZuulApplication" />
+        <item itemvalue="Application.MdhConsumerApplication" />
+        <item itemvalue="Application.MdhProducerApplication" />
         <item itemvalue="Application.MdhMonitorApplication" />
-        <item itemvalue="Application.MySqlBackupRestoreUtils" />
+        <item itemvalue="Application.MdhHystrixApplication" />
       </list>
     </recent_temporary>
   </component>

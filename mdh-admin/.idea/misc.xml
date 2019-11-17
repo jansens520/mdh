@@ -9,6 +9,10 @@
         <option value="$PROJECT_DIR$/../mdh-core/pom.xml" />
         <option value="$PROJECT_DIR$/../mdh-pom/pom.xml" />
         <option value="$PROJECT_DIR$/../mdh-monitor/pom.xml" />
+        <option value="$PROJECT_DIR$/../mdh-producer/pom.xml" />
+        <option value="$PROJECT_DIR$/../mdh-consumer/pom.xml" />
+        <option value="$PROJECT_DIR$/../mdh-hystrix/pom.xml" />
+        <option value="$PROJECT_DIR$/../mdh-zuul/pom.xml" />
       </list>
     </option>
   </component>
