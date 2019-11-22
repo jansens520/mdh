@@ -8,13 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mdh-hystrix" />
         <module name="mdh-admin" />
-        <module name="mdh-core" />
         <module name="mdh-common" />
         <module name="mdh-monitor" />
         <module name="mdh-consumer" />
-        <module name="mdh-producer" />
-        <module name="mdh-zuul" />
         <module name="mdh-backup" />
+        <module name="mdh-producer" />
+        <module name="mdh-config" />
+        <module name="mdh-zuul" />
+        <module name="mdh-core" />
+        <module name="spring-cloud-2.0-eureka-server" />
       </profile>
     </annotationProcessing>
   </component>
@@ -23,11 +25,13 @@
       <module name="mdh-admin" options="-parameters" />
       <module name="mdh-backup" options="-parameters" />
       <module name="mdh-common" options="-parameters" />
+      <module name="mdh-config" options="-parameters" />
       <module name="mdh-consumer" options="-parameters" />
       <module name="mdh-hystrix" options="-parameters" />
       <module name="mdh-monitor" options="-parameters" />
       <module name="mdh-producer" options="-parameters" />
       <module name="mdh-zuul" options="-parameters" />
+      <module name="spring-cloud-2.0-eureka-server" options="-parameters" />
     </option>
   </component>
 </project>

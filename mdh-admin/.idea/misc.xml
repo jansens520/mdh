@@ -13,6 +13,8 @@
         <option value="$PROJECT_DIR$/../mdh-consumer/pom.xml" />
         <option value="$PROJECT_DIR$/../mdh-hystrix/pom.xml" />
         <option value="$PROJECT_DIR$/../mdh-zuul/pom.xml" />
+        <option value="$PROJECT_DIR$/../spring-cloud-2.0-eureka-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../mdh-config/pom.xml" />
       </list>
     </option>
   </component>
