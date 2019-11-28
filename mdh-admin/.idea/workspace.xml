@@ -41,16 +41,19 @@
   <component name="ProjectId" id="1ScqWx9EtRoWy6fMCJ0oQ49wVcX" />
   <component name="PropertiesComponent">
     <property name="jdk.selected.JAVA_MODULE" value="1.8.0_231" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../mdh-consumer/src/main/java/com/read/mdh/consumer/controller" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/read/mdh" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\ideaProject\mdh-consumer\src\main\java\com\read\mdh\consumer\controller" />
-      <recent name="D:\ideaProject\mdh-consumer\src\main\resources" />
-      <recent name="D:\ideaProject\mdh-config\src\main\resources" />
-      <recent name="D:\ideaProject\mdh-zuul\src\main\java\com\read\mdh\zuul" />
-      <recent name="D:\ideaProject\mdh-zuul\src\main\resources" />
+      <recent name="D:\ideaProject\mdh-admin\src\main\java\com\read\mdh" />
+      <recent name="D:\ideaProject\mdh-admin\src\main\java\com\read\mdh\config" />
+      <recent name="D:\ideaProject\mdh-core\src\main\java\com\read\core\page" />
+      <recent name="D:\ideaProject\mdh-admin\src\main\java\com\read\mdh\util" />
+      <recent name="D:\ideaProject\mdh-consumer\src\main\java\com\read\mdh\consumer" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -65,31 +68,24 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.MdhConfigApplication">
-    <configuration name="AppEureka" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jansens.eureka.AppEureka" />
+  <component name="RunManager" selected="Application.MdhApplication">
+    <configuration name="B" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.jansens.eureka.B" />
       <module name="spring-cloud-2.0-eureka-server" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Chile" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.jansens.eureka.Chile" />
-      <module name="spring-cloud-2.0-eureka-server" />
+    <configuration name="MdhApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.MdhApplication" />
+      <module name="mdh-admin" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MdhConfigApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.read.mdh.config.MdhConfigApplication" />
-      <module name="mdh-config" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MdhConsumerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.read.mdh.consumer.MdhConsumerApplication" />
-      <module name="mdh-consumer" />
+    <configuration name="MdhBackupApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.backup.MdhBackupApplication" />
+      <module name="mdh-backup" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -101,13 +97,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MdhZuulApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.read.mdh.zuul.MdhZuulApplication" />
+      <module name="mdh-zuul" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MdhConsumerApplication" />
-        <item itemvalue="Application.MdhConfigApplication" />
+        <item itemvalue="Application.MdhApplication" />
         <item itemvalue="Application.MdhMonitorApplication" />
-        <item itemvalue="Application.AppEureka" />
-        <item itemvalue="Application.Chile" />
+        <item itemvalue="Application.B" />
+        <item itemvalue="Application.MdhBackupApplication" />
+        <item itemvalue="Application.MdhZuulApplication" />
       </list>
     </recent_temporary>
   </component>

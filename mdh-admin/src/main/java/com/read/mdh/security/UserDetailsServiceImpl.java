@@ -3,14 +3,15 @@ import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import com.read.mdh.model.SysUser;
-import com.read.mdh.service.SysUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
+
+import com.read.mdh.model.SysUser;
+import com.read.mdh.service.SysUserService;
 
 /**
  * 用户登录认证信息查询

@@ -6,6 +6,7 @@ import com.read.core.http.HttpResult;
 import com.read.mdh.model.SysMenu;
 import com.read.mdh.service.SysMenuService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,26 +21,30 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("menu")
 public class SysMenuController {
 
-	@Autowired
-	private SysMenuService sysMenuService;
-	
-	@PostMapping(value="/save")
-	public HttpResult save(@RequestBody SysMenu record) {
-		return HttpResult.ok(sysMenuService.save(record));
-	}
+    @Autowired
+    private SysMenuService sysMenuService;
 
-	@PostMapping(value="/delete")
-	public HttpResult delete(@RequestBody List<SysMenu> records) {
-		return HttpResult.ok(sysMenuService.delete(records));
-	}
+    @PreAuthorize("hasAuthority('sys:menu:add') AND hasAuthority('sys:menu:edit')")
+    @PostMapping(value="/save")
+    public HttpResult save(@RequestBody SysMenu record) {
+        return HttpResult.ok(sysMenuService.save(record));
+    }
 
-	@GetMapping(value="/findNavTree")
-	public HttpResult findNavTree(@RequestParam String userName) {
-		return HttpResult.ok(sysMenuService.findTree(userName, 1));
-	}
-	
-	@GetMapping(value="/findMenuTree")
-	public HttpResult findMenuTree() {
-		return HttpResult.ok(sysMenuService.findTree(null, 0));
-	}
+    @PreAuthorize("hasAuthority('sys:menu:delete')")
+    @PostMapping(value="/delete")
+    public HttpResult delete(@RequestBody List<SysMenu> records) {
+        return HttpResult.ok(sysMenuService.delete(records));
+    }
+
+    @PreAuthorize("hasAuthority('sys:menu:view')")
+    @GetMapping(value="/findNavTree")
+    public HttpResult findNavTree(@RequestParam String userName) {
+        return HttpResult.ok(sysMenuService.findTree(userName, 1));
+    }
+
+    @PreAuthorize("hasAuthority('sys:menu:view')")
+    @GetMapping(value="/findMenuTree")
+    public HttpResult findMenuTree() {
+        return HttpResult.ok(sysMenuService.findTree(null, 0));
+    }
 }

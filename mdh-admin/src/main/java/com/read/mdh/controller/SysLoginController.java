@@ -12,7 +12,9 @@ import com.read.common.utils.IOUtils;
 import com.read.core.http.HttpResult;
 import com.read.mdh.model.SysUser;
 import com.read.mdh.security.JwtAuthenticatioToken;
+import com.read.mdh.service.SysLoginLogService;
 import com.read.mdh.service.SysUserService;
+import com.read.mdh.util.IPUtils;
 import com.read.mdh.util.PasswordUtils;
 import com.read.mdh.util.SecurityUtils;
 import com.read.mdh.vo.LoginBean;
@@ -32,29 +34,31 @@ import com.google.code.kaptcha.Producer;
 @RestController
 public class SysLoginController {
 
-	@Autowired
-	private Producer producer;
-	@Autowired
-	private SysUserService sysUserService;
+    @Autowired
+    private Producer producer;
+    @Autowired
+    private SysUserService sysUserService;
+    @Autowired
+    private SysLoginLogService sysLoginLogService;
     @Autowired
     private AuthenticationManager authenticationManager;
 
-	@GetMapping("captcha.jpg")
-	public void captcha(HttpServletResponse response, HttpServletRequest request) throws ServletException, IOException {
-		response.setHeader("Cache-Control", "no-store, no-cache");
-		response.setContentType("image/jpeg");
+    @GetMapping("captcha.jpg")
+    public void captcha(HttpServletResponse response, HttpServletRequest request) throws ServletException, IOException {
+        response.setHeader("Cache-Control", "no-store, no-cache");
+        response.setContentType("image/jpeg");
 
-		// 生成文字验证码
-		String text = producer.createText();
-		// 生成图片验证码
-		BufferedImage image = producer.createImage(text);
-		// 保存到验证码到 session
-		request.getSession().setAttribute(Constants.KAPTCHA_SESSION_KEY, text);
+        // 生成文字验证码
+        String text = producer.createText();
+        // 生成图片验证码
+        BufferedImage image = producer.createImage(text);
+        // 保存到验证码到 session
+        request.getSession().setAttribute(Constants.KAPTCHA_SESSION_KEY, text);
 
-		ServletOutputStream out = response.getOutputStream();
-		ImageIO.write(image, "jpg", out);	
-		IOUtils.closeQuietly(out);
-	}
+        ServletOutputStream out = response.getOutputStream();
+        ImageIO.write(image, "jpg", out);
+        IOUtils.closeQuietly(out);
+    }
 
     /**
      * 登录接口
@@ -66,12 +70,12 @@ public class SysLoginController {
         String captcha = loginBean.getCaptcha();
         // 从session中获取之前保存的验证码跟前台传来的验证码进行匹配
         Object kaptcha = request.getSession().getAttribute(Constants.KAPTCHA_SESSION_KEY);
-        if(kaptcha == null){
-            return HttpResult.error("验证码已失效");
-        }
-        if(!captcha.equals(kaptcha)){
-            return HttpResult.error("验证码不正确");
-        }
+//		if(kaptcha == null){
+//			return HttpResult.error("验证码已失效");
+//		}
+//		if(!captcha.equals(kaptcha)){
+//			return HttpResult.error("验证码不正确");
+//		}
         // 用户信息
         SysUser user = sysUserService.findByName(username);
         // 账号不存在、密码错误
@@ -87,7 +91,10 @@ public class SysLoginController {
         }
         // 系统登录认证
         JwtAuthenticatioToken token = SecurityUtils.login(request, username, password, authenticationManager);
+        // 记录登录日志
+        sysLoginLogService.writeLoginLog(username, IPUtils.getIpAddr(request));
         return HttpResult.ok(token);
     }
 
 }
+

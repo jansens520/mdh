@@ -1,12 +1,13 @@
 package com.read.mdh.security;
 
-import com.read.mdh.util.PasswordEncoder;
 import org.springframework.security.authentication.BadCredentialsException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
+
+import com.read.mdh.util.PasswordEncoder;
 
 /**
  * 身份验证提供者

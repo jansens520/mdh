@@ -1,7 +1,5 @@
 package com.read.mdh.config;
 
-import com.read.mdh.security.JwtAuthenticationFilter;
-import com.read.mdh.security.JwtAuthenticationProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,6 +13,9 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.authentication.logout.HttpStatusReturningLogoutSuccessHandler;
+
+import com.read.mdh.security.JwtAuthenticationFilter;
+import com.read.mdh.security.JwtAuthenticationProvider;
 
 /**
  * Spring Security配置
@@ -58,6 +59,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .antMatchers("/actuator/**").permitAll()
             // 其他所有请求需要身份认证
             .anyRequest().authenticated();
+        http.headers().frameOptions().disable();
         // 退出登录处理器
         http.logout().logoutSuccessHandler(new HttpStatusReturningLogoutSuccessHandler());
         // token验证过滤器

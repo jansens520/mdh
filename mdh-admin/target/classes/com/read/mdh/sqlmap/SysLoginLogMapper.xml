@@ -144,4 +144,20 @@
         from sys_login_log
         where status like #{pattern}
     </select>
+    <select id="findPageByUserNameAndStatus" parameterType="java.lang.String" resultMap="BaseResultMap">
+        <bind name="userNamePattern" value="'%' + _parameter.userName + '%'" />
+        <bind name="statusPattern" value="'%' + _parameter.status + '%'" />
+        select
+        <include refid="Base_Column_List" />
+        from sys_login_log
+        where user_name like #{userNamePattern}
+        and status like #{statusPattern}
+    </select>
+    <select id="findByUserNameAndStatus" parameterType="java.lang.String" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List" />
+        from sys_login_log
+        where user_name = #{userName,jdbcType=VARCHAR}
+        and status = #{status,jdbcType=VARCHAR}
+    </select>
 </mapper>

@@ -8,14 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="mdh-hystrix" />
         <module name="mdh-admin" />
+        <module name="mdh-core" />
         <module name="mdh-common" />
         <module name="mdh-monitor" />
         <module name="mdh-consumer" />
-        <module name="mdh-backup" />
         <module name="mdh-producer" />
         <module name="mdh-config" />
         <module name="mdh-zuul" />
-        <module name="mdh-core" />
+        <module name="mdh-backup" />
         <module name="spring-cloud-2.0-eureka-server" />
       </profile>
     </annotationProcessing>
